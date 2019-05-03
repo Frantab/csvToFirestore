@@ -76,7 +76,7 @@ const config = {
     messagingSenderId: YOUR_MESSAGING_SENDER_ID
 };
 const button = document.querySelector('#button');
-const completed = document,createElement('div');
+const completed = document.createElement('div');
 
 button.addEventListener('click', () => {
     document.body.removeChild(button);
