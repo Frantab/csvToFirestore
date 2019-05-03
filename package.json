@@ -1,0 +1,40 @@
+{
+  "name": "csvtofirestore",
+  "version": "0.1.0",
+  "description": "This project converts CSV file to firebase firestore.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "eslint src && webpack --mode production",
+    "test": "jest --coverage",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frantab/csvToFirestore.git"
+  },
+  "keywords": [
+    "csv",
+    "firestore",
+    "firebase",
+    "convert"
+  ],
+  "author": "Frantisek Bachrony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frantab/csvToFirestore/issues"
+  },
+  "homepage": "https://github.com/Frantab/csvToFirestore#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-jest": "^24.7.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
+    "file-loader": "^3.0.1",
+    "firebase": "^5.11.0",
+    "jest": "^24.7.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
