@@ -1,5 +1,15 @@
 import * as firebase from 'firebase';
 
+const csvFileToString = (path, success, error) => {
+	const csv = new XMLHttpRequest();
+
+	csv.onload = () => success(csv.response);
+	csv.onerror = err => error(err);
+
+	csv.open('GET', path);
+	csv.send();
+};
+
 const csvToArray = csvString => {
 	const lines = csvString.split('\n');
 	const keys = lines.shift().split(';');
@@ -17,11 +27,12 @@ const csvToArray = csvString => {
 	});
 };
 
-const convert = (collectionName, firebaseConfig, csvString) => {
+export const convert = (collectionName, pathToCsv, firebaseConfig) => {
 	const db = firebase.initializeApp(firebaseConfig).firestore();
-	const csv = csvToArray(csvString);
 
-	csv.forEach(line => db.collection(collectionName).add(line));
+	csvFileToString(pathToCsv, response => {
+		const csv = csvToArray(response);
+
+		csv.forEach(line => db.collection(collectionName).add(line));
+	}, error => console.log(error));
 };
-
-export default convert;
