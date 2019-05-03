@@ -5,7 +5,7 @@ Realy basic (not smart we can say STUPID) javascript tool for converting data fr
 ## Installation
 Install using npm:
 ```
-npm install --save-dev csvToFirebase
+npm install --save-dev @brandund/csvtofirestore
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ cd what_ever
 ### 2) Initialize npm, install basic bundle-able enviroment and install `csvToFirebase`.
 ```
 npm init --yes
-npm install --save-dev webpack @babel/core @babel/preset-env babel-loader webpack-cli csvToFirebase
+npm install --save-dev webpack @babel/core @babel/preset-env babel-loader webpack-cli @brandund/csvtofirestore
 ```
 ### 3) Edit package.json and create `webpack.config.js` file.
 Replace `"scripts"` array in package.json for this:
@@ -64,7 +64,7 @@ touch main.js
 ```
 Insert code below into `main.js`:
 ```javascript
-import * as csvToFirebase from 'csvToFirebase';
+import * as csvToFirebase from '@brandund/csvtofirestore';
 
 // Take this config from firebase console.
 const config = {

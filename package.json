@@ -1,5 +1,5 @@
 {
-  "name": "csvtofirestore",
+  "name": "@brandund/csvtofirestore",
   "version": "0.1.0",
   "description": "This project converts CSV file to firebase firestore.",
   "main": "index.js",
