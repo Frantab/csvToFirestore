@@ -10,11 +10,10 @@ npm i -g @brandund/csvtofirestore
 
 ## Usage
 
-#### 1) Create empty dir and initialize npm in it.
+#### 1) Create empty dir and go in it.
 ```bash
 mkdir what_ever
 cd what_ever
-npm init --yes
 ```
 #### 2) Install `@brandund/csvtofirestore`.
 ```bash
@@ -40,7 +39,7 @@ module.exports = {
 #### 4) Copy your `.csv` file into `what_ever` folder.
 #### 5) Run `csvtofirestore` tool.
 ```bash
-csvtofirestore -F 'firebaseConfig.js' -C 'data.csv' -c 'users'
+csvtofirestore -F "$(pwd)/firebaseConfig.js" -C "$(pwd)/data.csv" -c 'users'
 ```
 
 ## Options

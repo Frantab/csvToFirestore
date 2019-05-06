@@ -1,3 +1,5 @@
+#!/usr/bin/env node --harmony
+
 const program = require('commander');
 
 program
@@ -36,7 +38,7 @@ const fs = require('fs');
 let firebaseConfig = {};
 
 try {
-    firebaseConfig = require(`./${program.firebaseConfig}`).config;
+    firebaseConfig = require(`${program.firebaseConfig}`).config;
 } catch(error) {
     console.error(`Required option --firebase-config contains name of file (${program.firebaseConfig}) which does not exist.`);
     return;
@@ -68,7 +70,7 @@ const csvToArray = csvString => {
  */
 const db = firebase.initializeApp(firebaseConfig).firestore();
 
-csvString = fs.readFile(`./${program.csv}`, 'utf8', (error, csvString) => {
+csvString = fs.readFile(`${program.csv}`, 'utf8', (error, csvString) => {
     if (error && error.code === 'ENOENT') {
         console.error(`Csv file ${program.csv} was not found.`);
         return;
