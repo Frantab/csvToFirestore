@@ -5,7 +5,7 @@ Realy basic (not smart we can say STUPID) javascript tool for converting data fr
 ## Installation
 Install using npm:
 ```
-npm i g @brandund/csvtofirestore
+npm i -g @brandund/csvtofirestore
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ npm init --yes
 ```
 #### 2) Install `@brandund/csvtofirestore`.
 ```bash
-npm i g @brandund/csvtofirestore
+npm i -g @brandund/csvtofirestore
 ```
 #### 3) Create `firebaseConfig.js` and add config of your firebase project into it.
 ```bash
@@ -37,9 +37,10 @@ module.exports = {
     }
 };
 ```
-#### 4) Run `csvtofirestore` tool.
+#### 4) Copy your `.csv` file into `what_ever` folder.
+#### 5) Run `csvtofirestore` tool.
 ```bash
-@brandund/csvtofirestore -F 'firebaseConfig.js' -C 'data.csv' -c 'users'
+csvtofirestore -F 'firebaseConfig.js' -C 'data.csv' -c 'users'
 ```
 
 ## Options
